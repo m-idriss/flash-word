@@ -85,7 +85,7 @@ mvn package
 ```bash
 cd frontend
 npm install
-ng build --prod
+ng build --configuration=production
 ```
 3. Build images and run containers
 ```bash
