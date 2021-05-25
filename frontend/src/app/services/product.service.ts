@@ -31,8 +31,15 @@ export class ProductService {
         );
     }
 
-    getCountAllInCategory(categoryType: number): Observable<any> {
+    getAllProductCountInCategory(categoryType: number): Observable<any> {
         const url = `${this.categoryUrl}/${categoryType}/count`;
+        return this.http.get(url).pipe(
+            // tap(data => console.log(data))
+        );
+    }
+
+    getAllProductCount(): Observable<any> {
+        const url = `${this.productUrl}/count`;
         return this.http.get(url).pipe(
             // tap(data => console.log(data))
         );

@@ -47,8 +47,15 @@ public class ProductController {
         return productInfo;
     }
     
+    @GetMapping("/product/count")
+    public long productCount() {
+        PageRequest request = PageRequest.of(0, Integer.MAX_VALUE);
+        return productService.findAll(request).getNumberOfElements();
+    }
+    
     @GetMapping("/category/{type}/count")
-    public long count(@PathVariable("type") Integer categoryType) {
+    public long categoryCount(@PathVariable("type") Integer categoryType) {
+    	System.err.println("tsatsa");
         PageRequest request = PageRequest.of(0, Integer.MAX_VALUE);
         Page<ProductInfo> productInfo = productService.findAllInCategory(categoryType, request);
         return productInfo.getNumberOfElements();

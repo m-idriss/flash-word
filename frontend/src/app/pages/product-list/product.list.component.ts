@@ -1,5 +1,4 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {UserService} from "../../services/user.service";
 import {ProductService} from "../../services/product.service";
 import {JwtResponse} from "../../response/JwtResponse";
 import {Subscription} from "rxjs";
@@ -16,9 +15,9 @@ import {Role} from "../../enum/Role";
 })
 export class ProductListComponent implements OnInit, OnDestroy {
 
-    constructor(private userService: UserService,
-                private productService: ProductService,
-                private route: ActivatedRoute) {
+    constructor(private productService: ProductService,
+                private route: ActivatedRoute,
+                ) {
     }
 
     Role = Role;
@@ -47,12 +46,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
             this.getProds();
         }
     }
-
-    getCountAllInCategory() {
-        const type = this.route.snapshot.url[1].path;
-        return this.productService.getCountAllInCategory(+type);
-    }
-
+    
     getProds(page: number = 1, size: number = 5) {
         this.productService.getAllInPage(+page, +size)
             .subscribe(page => {
