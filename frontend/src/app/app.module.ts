@@ -20,8 +20,8 @@ import {OrderDetailComponent} from './pages/order-detail/order-detail.component'
 import {ProductListComponent} from './pages/product-list/product.list.component';
 import {UserDetailComponent} from './pages/user-edit/user-detail.component';
 import {ProductEditComponent} from './pages/product-edit/product-edit.component';
-import { MatSliderModule } from '@angular/material/slider';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSliderModule} from '@angular/material/slider';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({

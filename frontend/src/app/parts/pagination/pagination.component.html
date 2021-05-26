@@ -49,3 +49,10 @@
     </ng-template>
   </ul>
 </div>
+<mat-paginator
+    [length]="productCount"
+    [pageSize]="currentPage?.size"
+    [pageIndex]="currentPage?.number"
+    (page)="handlePageEvent($event)"   
+    >
+</mat-paginator>

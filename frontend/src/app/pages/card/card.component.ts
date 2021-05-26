@@ -1,4 +1,4 @@
-import {Component, NgModuleRef, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, NgModuleRef, OnDestroy, OnInit} from '@angular/core';
 import {ProductService} from '../../services/product.service';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from "rxjs";
@@ -13,9 +13,9 @@ export class CardComponent implements OnInit, OnDestroy {
 
   title: string;
   page: any;
+  productCount: number;
   private paramSub: Subscription;
   private querySub: Subscription;
-  productCount: number;
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute) {
