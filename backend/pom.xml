@@ -83,6 +83,10 @@
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
+        <repository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -98,6 +102,9 @@
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
         </pluginRepository>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </pluginRepository>
     </pluginRepositories>
-
 </project>
